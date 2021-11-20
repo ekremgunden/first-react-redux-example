@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: #aeaeae;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.product {
+    max-width: 980px;    
+}
+
+ion-icon{
+    width: 32px;
+    height: 32px;
+    position: sticky;
+    top: 8px;
+    right: 8px;
+}
+
+.basket{
+    max-height: 600px;
+    overflow-y: scroll;
 }

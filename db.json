@@ -1,19 +1,46 @@
 {
-  "posts": [
+  "categories": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "temel-gida"
+    },
+    {
+      "id": 2,
+      "title": "kisisel-bakim"
+    },
+    {
+      "id": 3,
+      "title": "icecek"
     }
   ],
-  "comments": [
+  "products": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "categories": 1,
+      "body": "Doğuş Çay",
+      "imageUrl": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/03118004/03118004-e54fa0.jpg",
+      "price": 34
+    },
+    {
+      "id": 2,
+      "categories": 3,
+      "body": "Lipton IceTea",
+      "imageUrl": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/08059596/08059596-0be6a2.png",
+      "price": 8
+    },
+    {
+      "id": 3,
+      "categories": 1,
+      "body": "Ankara Makarna",
+      "imageUrl": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/05030215/nuh-un-ankara-boncuk-makarna-500-gr-d86176.jpg",
+      "price": 3
+    },
+    {
+      "id": 4,
+      "categories": 2,
+      "body": "Elidor Şampuan",
+      "imageUrl": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/34306101/34306101-2d424e.jpg",
+      "price": 26
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -11,17 +11,17 @@ In the project directory, you can run:
 
 #### wait for a package install
 
-## now you are ready to up the system :)
+now you are ready to up the system :)
 
-## Open two new terminal screen
+Open two new terminal screen
 
-## Write this run first terminal
+Write this run first terminal
 
 ### `npm run start`
 
-## and
+#### and
 
-## Write this run second terminal
+Write this run second terminal
 
 ### `npm run db-watch`
 

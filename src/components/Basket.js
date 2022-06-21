@@ -1,11 +1,13 @@
 import React,{useState} from 'react'
 import { useSelector } from 'react-redux'
+import {useDispatch} from 'react-redux';
+import {removeBasket} from '../stores/basket/basketSlice'
+import toast, { Toaster } from 'react-hot-toast'; 
 
-export default function Basket() {
+const  Basket = () => {
+    const dispatch = useDispatch()
     const basketProducts = useSelector(state => state.basket.cart)
     const [active,setActive] = useState(false)
-
-    console.log(basketProducts)
 
     const ters = () =>{
         setActive(!active)
@@ -16,28 +18,42 @@ export default function Basket() {
         0
     )
 
-    return (
-        <div>
-            <div className="absolute top-2 right-2 flex flex-col" >
-                {active ? <ion-icon name="close-outline" onClick={() => ters()} /> : <ion-icon name="basket-outline" onClick={() => ters()} />}            
+    const handleRemoveBasket = (data) =>{
+        dispatch(removeBasket(data))
+        toast('Başarılı bir şekilde silindi.',{duration:1000, icon: '❌',});
+    }
+  return (
+    <>
+        <div className='mr-4 fixed top-9 right-4 z-10'>
+            <div className="flex-col" >
+                    {active ? <ion-icon name="close-outline" onClick={() => ters()} /> : <ion-icon name="basket-outline" onClick={() => ters()} />}            
             </div>
             <div className={active ? "block" : "hidden"}>
-            <p className="absolute top-16 right-12">YOUR BASKET</p>
-            <div className="absolute top-32 right-8 basket">
-            {basketProducts.map((data,length)=>(
-                    <div key={data.length} className="p-4 m-6 bg-white rounded shadow-md top-32 right-12">
+                
+                <div className="absolute top-32 right-8 basket z-10 p-4 bg-yellow-200 rounded-xl">
+                <p className="flex items-center justify-center bg-black text-l p-2 text-white">YOUR BASKET</p>
+                {basketProducts.map((data,length,index)=>(
+                    <div key={data.id} className="p-4 m-6 bg-white rounded shadow-md top-32 right-12">
                         <div>
-                            <img src={data.imageUrl} alt="resim" className="max-h-60" />
+                            <ion-icon onClick={()=> handleRemoveBasket(data)} name="close-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <img src={data.imageUrl} alt="resim" className="basket-image" />
                         </div>
                         <div>
                             <p>{data.body}</p>
                             <p>{data.price} Tl</p>
                         </div>
-                    </div>
-                ))}
-                <div className="flex items-center justify-center">Toplam sepet tutarınız: {totalPrice} Tl</div>
-            </div>
+                    </div>  
+                    ))}
+                {basketProducts.length > 0 ? <div className="flex items-center justify-center">Toplam sepet tutarınız: {totalPrice} Tl</div> : <div>Sepetiniz boş</div>}
+                </div>
             </div>
         </div>
-    )
+        <Toaster />
+    </>
+
+  )
 }
+
+export default Basket

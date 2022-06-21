@@ -1,10 +1,10 @@
 import React, {useEffect,useState} from 'react'
 import { connect } from 'react-redux'
-import Basket from './components/Basket'
 import Product from './components/Product'
 
 const App = () => {
     const [data,setData] = useState(null);
+    const [categories,setCategories] = useState(null);
 
     useEffect( () => {
         fetch("http://localhost:1592/products")
@@ -12,12 +12,17 @@ const App = () => {
           .then((json) => {
             setData(json)
           });
+        fetch("http://localhost:1592/categories")
+          .then((response) => response.json())
+          .then((json) => {
+            setCategories(json)
+        });
     }, [])
 
     return (
         <div className="relative bg-red-100 py-8">
-            {data && <Product datas={data} />}
-            <Basket/>
+            {data && categories && <Product data={data} categories={categories} />}
+            
         </div>
     )
 }

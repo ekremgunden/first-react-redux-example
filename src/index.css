@@ -21,6 +21,15 @@ ion-icon{
 }
 
 .basket{
+    min-width: 120px;
     max-height: 600px;
     overflow-y: scroll;
+}
+
+.basket-image{
+    min-width: 140px;
+}
+
+.active{
+    background-color: rgb(252, 211, 77);
 }

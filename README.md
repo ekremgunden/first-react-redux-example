@@ -13,6 +13,8 @@ In the project directory, you can run:
 
 now you are ready to up the system :)
 
+### ---------------------------
+
 Open two new terminal screen
 
 Write this run first terminal

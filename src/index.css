@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: #aeaeae;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+}
+
+.product {
+    max-width: 980px;    
+}
+
+ion-icon{
+    width: 32px;
+    height: 32px;
+    position: sticky;
+    top: 8px;
+    right: 8px;
+}
+
+.basket{
+    min-width: 120px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.basket-image{
+    min-width: 140px;
+}
+
+.active{
+    background-color: rgb(252, 211, 77);
+}

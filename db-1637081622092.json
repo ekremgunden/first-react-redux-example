@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "temel-gida"
+    },
+    {
+      "id": 2,
+      "title": "kisisel-bakim"
+    },
+    {
+      "id": 3,
+      "title": "icecek"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categories": 1,
+      "body": "Doğuş Çay",
+      "image-url": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/03118004/03118004-e54fa0.jpg"
+    },
+    {
+      "id": 1,
+      "categories": 3,
+      "body": "Lipton IceTea",
+      "image-url": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/08059596/08059596-0be6a2.png"
+    },
+    {
+      "id": 1,
+      "categories": 1,
+      "body": "Ankara Makarna",
+      "image-url": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/05030215/nuh-un-ankara-boncuk-makarna-500-gr-d86176.jpg"
+    },
+    {
+      "id": 1,
+      "categories": 2,
+      "body": "Elidor Şampuan",
+      "image-url": "https://migros-dali-storage-prod.global.ssl.fastly.net/sanalmarket/product/34306101/34306101-2d424e.jpg"
+    }
+  ]
+}
